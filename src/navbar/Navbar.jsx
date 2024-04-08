@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const names = "nafis";
   const links = (
     <>
       <li className="lg:ml-4 p-2">
@@ -88,7 +89,7 @@ const Navbar = () => {
             <div
               tabIndex={0}
               role="button"
-              className="btn btn-ghost btn-circle mt-2 avatar tooltip tooltip-bottom" data-tip="hello"
+              className="btn btn-ghost btn-circle mt-2 avatar tooltip tooltip-bottom" data-tip={names}
             >
               <div className="w-10 rounded-full">
                 <img
@@ -103,9 +104,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="tooltip tooltip-bottom" data-tip="hello">
-     <button className="btn">Hover me</button>
-    </div>
+      
     </div>
   );
 };
