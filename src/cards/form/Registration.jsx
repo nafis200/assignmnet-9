@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { TbPasswordUser } from 'react-icons/tb';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 const Registration = () => {
+
+  const [showpass, setShowpass] = useState(false)
+
   const handleregister = e =>{
       e.preventDefault();
       const data = new FormData(e.target);
@@ -77,9 +81,17 @@ const Registration = () => {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" placeholder="password" 
+          <div className='relative form-control'>
+          <input type={ showpass ? "text": "password"} placeholder="password" 
           className="input input-bordered"
           name="password" />
+          <span className='absolute top-2 right-2 lg:right-4' onClick={()=>setShowpass(!showpass)}>
+
+          {
+              showpass ?  <FaEyeSlash className='text-3xl'></FaEyeSlash> : <FaEye className='text-3xl'></FaEye>
+          }
+          </span>
+          </div>
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Register</button>
