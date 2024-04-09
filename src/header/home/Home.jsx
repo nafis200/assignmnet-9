@@ -9,7 +9,6 @@ const Home = () => {
             <Helmet>
                <title>Dream house</title>
             </Helmet>
-            <h2 className="text">This is home</h2>
             <Swipper></Swipper>
         </div>
     );
