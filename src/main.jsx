@@ -10,6 +10,7 @@ import Header from './header/Header';
 import Home from './header/home/Home';
 import User from './pages/User';
 import Update from './pages/Update';
+import Carddetail from './cards/Carddetail';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
          {
            path:'/update',
            element:<Update></Update>
+         },
+         {
+           path:`/detail/:id`,
+           element:<Carddetail></Carddetail>,
+           loader:()=>fetch('/data.json')
          }
     ]
   },
@@ -41,4 +47,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
-

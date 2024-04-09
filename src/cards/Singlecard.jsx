@@ -5,6 +5,7 @@ import { FaDollarSign } from "react-icons/fa6";
 import { FaLandmark } from "react-icons/fa6";
 import { IoLocationOutline } from "react-icons/io5";
 import Facilities from './Facilities';
+import { NavLink } from "react-router-dom";
 const Singlecard = ({data}) => {
     const {id,estate_title,segment_name,description,price,area,location,image,facilities,status} = data
     return (
@@ -26,7 +27,7 @@ const Singlecard = ({data}) => {
     </p> </span>
     
     <div className="card-actions mt-2">
-      <button className="btn btn-primary">View Property</button> 
+      <NavLink to={`/detail/${id}`}> <button className='btn btn-primary'>View details</button> </NavLink>
     </div>
   </div>
       </div>
