@@ -1,16 +1,23 @@
 
 import {  useLoaderData, useParams } from "react-router";
-import { NavLink } from "react-router-dom"
+
+import Detail from "./Detail";
+import { Helmet } from 'react-helmet';
 
 const Carddetail = () => {
     const details = useLoaderData();
     const {id} = useParams()
     const idINt = parseInt(id)
+    const books = details.filter(book => book.id === idINt )
     
-    const books = details.filter(book => book.bookId === idINt )
     return (
         <div>
-            <h2 className="text-2xl">{idINt}</h2>
+            <Helmet>
+                <title>details{id}</title>
+            </Helmet>
+            {
+                books.map(book=> <Detail key={book.id} book={book}></Detail> )
+            }
         </div>
     );
 };
