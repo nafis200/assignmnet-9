@@ -4,7 +4,7 @@ import Singlecard from "./Singlecard";
 
 const Cards = ({load}) => {
     return (
-        <div className="">
+        <div className="mt-20">
             {
                 load.map(data=> <Singlecard key={data.id} data={data} ></Singlecard> )
             }
