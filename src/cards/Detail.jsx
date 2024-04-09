@@ -4,7 +4,7 @@ import { FaLandmark } from "react-icons/fa6";
 import { IoLocationOutline } from "react-icons/io5";
 
 const Detail = ({book}) => {
-    const {id,estate_title,segment_name,description,price,area,location,image,facilities,status} = book
+    const {id,estate_title,segment_name,description,price,area,location,image,facilities,status,position} = book
     return (
         <div className="mt-20">
           

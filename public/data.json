@@ -10,6 +10,7 @@
       "location": "Mountain Valley Estates, Scenic Town",
       "image": "https://i.postimg.cc/zGVnFKzn/photo-2024-04-08-22-28-34.jpg",
       "facilities": ["Large backyard", "Fireplace", "Modern kitchen"],
+      "position":[21.9162,92.2324],
       "view_property_button": "https://example.com/view_property?id=1"
     },
     {
@@ -23,6 +24,7 @@
       "location": "Downtown District, Metroville",
       "image": "https://i.postimg.cc/GmVR2jWf/photo-2024-04-08-22-34-59.jpg",
       "facilities": ["Rooftop terrace", "Open floor plan", "Garage"],
+      "position":[23.8925,90.4056],
       "view_property_button": "https://example.com/view_property?id=2"
     },
     {
@@ -36,6 +38,7 @@
       "location": "Riverside Towers, Cityscape",
       "image": "https://i.postimg.cc/7PJ8dQKc/photo-2024-04-08-22-28-32.jpg",
       "facilities": ["Balcony", "Fitness center", "Swimming pool"],
+      "position":[23.4492,90.1812],
       "view_property_button": "https://example.com/view_property?id=3"
     },
     {
@@ -49,6 +52,7 @@
       "location": "University District, College Town",
       "image": "https://i.postimg.cc/Y0h8h1KX/photo-2024-04-08-22-28-40.jpg",
       "facilities": ["Study area", "Laundry facilities", "Bike storage"],
+      "position":[22.8782,89.5266],
       "view_property_button": "https://example.com/view_property?id=4"
     },
     {
@@ -62,6 +66,7 @@
       "location": "Tranquil Meadows, Elderly Village",
       "image": "https://i.postimg.cc/mrj61787/photo-2024-04-08-22-28-31.jpg",
       "facilities": ["Community clubhouse", "Walking trails", "Assisted living services"],
+      "position":[23.5447,90.5307],
       "view_property_button": "https://example.com/view_property?id=5"
     },
     {
@@ -75,6 +80,7 @@
       "location": "Sunny Shores Resort, Coastal Paradise",
       "image": "https://i.postimg.cc/HnyZ6QZr/photo-2024-04-08-22-28-36.jpg",
       "facilities": ["Swimming pool", "Private beach access", "On-site dining"],
+      "position":[24.0075,90.4083],
       "view_property_button": "https://example.com/view_property?id=6"
     }
   ]
