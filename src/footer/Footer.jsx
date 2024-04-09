@@ -3,7 +3,7 @@ import { MdLocalPostOffice } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 const Footer = () => {
     return (
-        <footer className="footer footer-center lg:p-10 md:p-5 p-4  bg-base-200 text-base-content rounded mt-10">
+        <footer className="footer footer-center lg:p-10 md:p-5 p-4  bg-base-200 text-base-content rounded mt-20">
         <div className="">
         <p className="font-bold lg:text-2xl md:text-2xl">Dream House</p>
         <p className="font-bold lg:text-2xl flex md:text-2xl"> <span className="flex items-center mt-1"><MdLocalPostOffice  /></span>

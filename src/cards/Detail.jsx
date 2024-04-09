@@ -44,9 +44,10 @@ const Detail = ({book}) => {
             
         </section>  
 
-        <div className="md:h-[250px] h-[200px] lg:h-[400px] w-full mt-10">
+        <div className="md:h-[250px] h-[200px] lg:h-[400px] w-3/4 mt-10 container mx-auto">
+        <h2 className="text-2xl text-center font-bold mb-5">See the location</h2>
       <MapContainer
-        center={[23.8925, 90.4056]}
+        center={position}
         zoom={13}
         className="h-full w-full"
         scrollWheelZoom={true}
@@ -55,7 +56,7 @@ const Detail = ({book}) => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
-        <Marker position={[51.505, -0.09]}>
+        <Marker position={position}>
           <Popup></Popup>
         </Marker>
       </MapContainer>
