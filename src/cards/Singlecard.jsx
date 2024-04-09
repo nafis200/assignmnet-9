@@ -25,8 +25,8 @@ const Singlecard = ({data}) => {
          }
     </p> </span>
     
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Watch</button> 
+    <div className="card-actions mt-2">
+      <button className="btn btn-primary">View Property</button> 
     </div>
   </div>
       </div>
