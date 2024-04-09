@@ -74,7 +74,9 @@ const Navbar = () => {
                 tabindex="0"
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 flex"
               >
+                <div>
                 {links}
+                </div>
               </ul>
             </div>
             <a className="btn btn-ghost text-xl lg:text-2xl font-bold">

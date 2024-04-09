@@ -6,7 +6,7 @@ import { Navigation,Pagination } from 'swiper/modules';
 
 const Swipper = () => {
   return (
-    <>
+    <div className='mt-[200px] lg:mt-10 '>
     <Swiper
       pagination={{
         type: 'fraction',
@@ -22,7 +22,8 @@ const Swipper = () => {
       <SwiperSlide><img className='lg:w-full lg:h-[550px] mt-5' src="https://i.postimg.cc/zGVnFKzn/photo-2024-04-08-22-28-34.jpg" alt="" /> </SwiperSlide>
       
     </Swiper>
-  </>
+    </div>
+
   );
 };
 
