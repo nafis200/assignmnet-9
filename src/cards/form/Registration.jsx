@@ -8,6 +8,7 @@ const Registration = () => {
 
    const handleRegistration = (data)=>{
          console.log(data); 
+         reset()
    }
 
   return (
@@ -34,6 +35,15 @@ const Registration = () => {
         </div>
         <div className="form-control">
           <label className="label">
+            <span className="label-text">ImageUrl</span>
+          </label>
+          <input {...register('image',{
+             required: 'input field is required'
+          })} type="text" placeholder="imageLink" name="image" className={`input input-bordered`}   />
+           {errors.name && <p className="text-red-600 font-bold py-2">{errors.name.message}</p>}
+        </div>
+        <div className="form-control">
+          <label className="label">
             <span className="label-text">Email</span>
           </label>
           <input  {...register('email',{
@@ -55,7 +65,7 @@ const Registration = () => {
         </div>
         
         <div className="form-control mt-6">
-          <button type='submit' className="btn btn-primary">Login</button>
+          <button type='submit' className="btn btn-primary">Register</button>
           
         </div>
       </form>
