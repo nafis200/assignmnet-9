@@ -1,80 +1,97 @@
-
-import { useForm } from "react-hook-form";
 import { Helmet } from 'react-helmet';
+import { TbPasswordUser } from 'react-icons/tb';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Registration = () => {
-  
-   const {register,handleSubmit,reset,formState:{errors}} = useForm()
-
-   const handleRegistration = (data)=>{
-         console.log(data); 
-         reset()
-   }
-
+  const handleregister = e =>{
+      e.preventDefault();
+      const data = new FormData(e.target);
+      const email = data.get("email");
+      const name = data.get("name")
+      const password = data.get("password")
+      const image = data.get("image")
+      if(!name && !email && !password && !image){
+          toast.error('please fill up the form')
+          return
+      }
+      if(!name){
+         toast.error('please fill up the name field')
+         return
+      }
+      if(!email){
+         toast.error('please fill up the email field')
+         return
+      }
+      if(!image){
+         toast.error('please fill up the image field')
+         return
+      }
+      if(!password){
+         toast.error('please fill up the password field')
+         return
+      }
+      if(password.length < 6){
+        toast.error('password must be 6 character')
+        return
+      }
+      if( !/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)){
+         toast.error('password must be uppercase and lowercase character')
+         return
+      }
+      e.target.reset()
+  }
   return (
-      <div>
-        <Helmet>
+    <div>
+      <Helmet>
             <title>Registration page</title>
         </Helmet>
-        <div className="hero min-h-screen ">
-      <div className="hero-content flex-col">
+        <div className="hero bg-base-200">
+  <div className="hero-content flex-col">
     <div className="text-center">
-      <h1 className="lg:text-5xl md:text-3xl text-xl font-bold mb-5 -ml-8 lg:ml-0 md:ml-0">Registration now!</h1>
+      <h1 className="lg:text-5xl md:text-3xl text-2xl font-bold">Register now!</h1>
     </div>
-    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 -ml-5 lg:ml-0 md:ml-0">
-      <form  onSubmit={handleSubmit(handleRegistration)} className="card-body">
+    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+      <form onSubmit={handleregister} className="card-body">
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Name</span>
+            <span className="label-text">name</span>
           </label>
-          <input {...register('name',{
-             required: 'input field is required',
-             minLength:{value:3,message:'min length3'}
-          })} type="text" placeholder="name" name="name" className={`input input-bordered`}   />
-           {errors.name && <p className="text-red-600 font-bold py-2">{errors.name.message}</p>}
+          <input type="text" name="name" placeholder="name" className="input input-bordered"/>
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">ImageUrl</span>
+            <span className="label-text">imageLink</span>
           </label>
-          <input {...register('image',{
-             required: 'input field is required'
-          })} type="text" placeholder="imageLink" name="image" className={`input input-bordered`}   />
-           {errors.name && <p className="text-red-600 font-bold py-2">{errors.name.message}</p>}
+          <input type="text" placeholder="imageurl"
+          name ="image" 
+          className="input input-bordered"/>
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input  {...register('email',{
-             required: 'input field is required'
-          })} type="email" placeholder="email" name="email" className="input input-bordered"  />
-          {errors.email && <p className="text-red-600 font-bold py-2">{errors.email.message}</p>}
+          <input type="email" placeholder="email" name="email" className="input input-bordered" />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input  {...register('pass',{
-            required:'password is required',
-            minLength:{value: 6, message:'password must be at least 6 character'},
-            validate: (value) =>
-            /^(?=.*[a-z])(?=.*[A-Z]).+$/.test(value) || 'Password must contain at least one uppercase and lowercase letter',
-          })} type="password" placeholder="password" name="pass"  className="input input-bordered"  />
-          {errors.pass && <p>{errors.pass.message}</p>}
+          <input type="password" placeholder="password" 
+          className="input input-bordered"
+          name="password" />
         </div>
-        
         <div className="form-control mt-6">
-          <button type='submit' className="btn btn-primary">Register</button>
-          
+          <button className="btn btn-primary">Register</button>
         </div>
+        <div className='flex justify-end text-blue-600'>login</div>
       </form>
-
     </div>
   </div>
 </div>
-      </div>
-    );
+  <ToastContainer></ToastContainer>
+    </div>
+  );
 };
 
 export default Registration;

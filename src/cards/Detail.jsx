@@ -70,3 +70,5 @@ const Detail = ({book}) => {
 };
 
 export default Detail;
+
+
