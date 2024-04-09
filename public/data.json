@@ -8,7 +8,7 @@
       "status": "sale",
       "area": "3000 sq ft",
       "location": "Mountain Valley Estates, Scenic Town",
-      "image": "https://i.postimg.cc/MKP39pW8/photo-2024-04-08-22-28-34.jpg",
+      "image": "https://i.postimg.cc/zGVnFKzn/photo-2024-04-08-22-28-34.jpg",
       "facilities": ["Large backyard", "Fireplace", "Modern kitchen"],
       "view_property_button": "https://example.com/view_property?id=1"
     },
@@ -21,7 +21,7 @@
       "status": "sale",
       "area": "2200 sq ft",
       "location": "Downtown District, Metroville",
-      "image": "https://i.postimg.cc/TwJCgRkF/photo-2024-04-08-22-34-59.jpg",
+      "image": "https://i.postimg.cc/GmVR2jWf/photo-2024-04-08-22-34-59.jpg",
       "facilities": ["Rooftop terrace", "Open floor plan", "Garage"],
       "view_property_button": "https://example.com/view_property?id=2"
     },
@@ -34,7 +34,7 @@
       "status": "rent",
       "area": "1200 sq ft",
       "location": "Riverside Towers, Cityscape",
-      "image": "https://i.postimg.cc/Dw7fP5yN/photo-2024-04-08-22-28-32.jpg",
+      "image": "https://i.postimg.cc/7PJ8dQKc/photo-2024-04-08-22-28-32.jpg",
       "facilities": ["Balcony", "Fitness center", "Swimming pool"],
       "view_property_button": "https://example.com/view_property?id=3"
     },
@@ -47,7 +47,7 @@
       "status": "rent",
       "area": "500 sq ft",
       "location": "University District, College Town",
-      "image": "https://i.postimg.cc/YC7NfcFw/photo-2024-04-08-22-28-40.jpg",
+      "image": "https://i.postimg.cc/Y0h8h1KX/photo-2024-04-08-22-28-40.jpg",
       "facilities": ["Study area", "Laundry facilities", "Bike storage"],
       "view_property_button": "https://example.com/view_property?id=4"
     },
@@ -60,7 +60,7 @@
       "status": "sale",
       "area": "1800 sq ft",
       "location": "Tranquil Meadows, Elderly Village",
-      "image": "https://i.postimg.cc/X7139Wmr/photo-2024-04-08-22-28-31.jpg",
+      "image": "https://i.postimg.cc/mrj61787/photo-2024-04-08-22-28-31.jpg",
       "facilities": ["Community clubhouse", "Walking trails", "Assisted living services"],
       "view_property_button": "https://example.com/view_property?id=5"
     },
@@ -73,9 +73,10 @@
       "status": "rent",
       "area": "1000 sq ft",
       "location": "Sunny Shores Resort, Coastal Paradise",
-      "image": "https://i.postimg.cc/CLgn9GxG/photo-2024-04-08-22-28-36.jpg",
+      "image": "https://i.postimg.cc/HnyZ6QZr/photo-2024-04-08-22-28-36.jpg",
       "facilities": ["Swimming pool", "Private beach access", "On-site dining"],
       "view_property_button": "https://example.com/view_property?id=6"
     }
   ]
+  
   
