@@ -11,6 +11,7 @@ import Home from './header/home/Home';
 import User from './pages/User';
 import Update from './pages/Update';
 import Carddetail from './cards/Carddetail';
+import Registration from './cards/form/Registration';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
            path:`/detail/:id`,
            element:<Carddetail></Carddetail>,
            loader:()=>fetch('/data.json')
+         },
+         {
+           path:'/registration',
+           element:<Registration></Registration>
          }
     ]
   },
