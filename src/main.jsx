@@ -12,6 +12,7 @@ import User from './pages/User';
 import Update from './pages/Update';
 import Carddetail from './cards/Carddetail';
 import Registration from './cards/form/Registration';
+import Login from './cards/form/Login';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
          {
            path:'/registration',
            element:<Registration></Registration>
+         },
+         {
+           path:'/login',
+           element:<Login></Login>
          }
     ]
   },
