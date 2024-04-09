@@ -1,7 +1,7 @@
 
 import { Helmet } from 'react-helmet';
 import { NavLink } from 'react-router-dom';
-
+import { FaGithub } from "react-icons/fa";
 const Login = () => {
     return (
         <div>
@@ -42,6 +42,9 @@ const Login = () => {
               <div className="form-control mt-6">
                 <button className="btn btn-primary">login</button>
               </div>
+              <div className="form-control mt-6">
+                <button className="btn  font-bold"> <span> <FaGithub className='text-2xl'></FaGithub> </span>Login with Github</button>
+              </div>
               <div className="flex justify-end text-blue-600 underline"> <NavLink to="/registration">Register</NavLink> </div>
             </form>
           </div>
@@ -52,3 +55,4 @@ const Login = () => {
 };
 
 export default Login;
+
