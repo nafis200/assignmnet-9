@@ -1,10 +1,17 @@
 import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from "../provider/Authprovider";
+import auth from "../../firebase";
+import { updateProfile } from "firebase/auth";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Update = () => {
 const {users} = useContext(AuthContext);
+const Auth = auth;
+const datas = auth.currentUser;
+console.log("hi i am update",datas);
 
 let names = ""
 let emails = ""
@@ -30,7 +37,25 @@ if(users){
   }});
 
   const handleRegistration = (data) => {
-    console.log(data);
+    let update_name = ""
+    let update_image = ""
+    if(data){
+        const {name,image} = data;
+        update_name = name 
+        update_image = image
+        console.log(update_name,update_image);
+    }
+    updateProfile(auth.currentUser,{
+         displayName:update_name,
+         photoURL:update_image
+    })
+    .then(()=>{
+         toast.success('successfully update')
+    })
+    .catch((error)=>{
+         console.log(error.message)
+    })
+
   };
   return (
     <div>
@@ -115,6 +140,7 @@ if(users){
           </div>
         </div>
       </section>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
