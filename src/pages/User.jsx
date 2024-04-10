@@ -26,7 +26,7 @@ const User = () => {
             </Helmet>
            <div className='container mx-auto'>
              
-             <img src={images} className='md:ml-[250px] lg:ml-[700px] ml-[50px] mt-10 rounded-full w-[200px]' alt="" />
+             <img src={images} className='md:ml-[250px] lg:ml-[700px] ml-[50px] mt-10 rounded-full w-[200px] h-[200px]' alt="" />
              <h2 className="lg:text-3xl md:text-2xl text-xl font-bold md:ml-[200px] lg:ml-[620px] ml-[20px] mt-10 text-blue-400">
                <span>Name:</span>  {name}</h2>
              <h2 className="lg:text-3xl md:text-2xl text-xl font-bold md:ml-[200px] lg:ml-[620px] ml-[20px] mt-5 text-red-600">
