@@ -28,12 +28,16 @@ const Login = () => {
          signIngoogle()
          .then(result=>{
               console.log(result.user);
+              toast.success("successfully login");
          })
          .catch()
     }
     const handlegithub = ()=>{
         signIngithub()
-        .then(result => console.log(result.user))
+        .then(result => {
+              console.log(result.user)
+              toast.success("successfully login");
+        })
         .catch(error=> console.log(error.message))
     }
     return ( 
