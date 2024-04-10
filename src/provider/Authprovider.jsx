@@ -39,7 +39,7 @@ const signIngithub = ()=>{
 useEffect(()=>{
     const unSubscrive = onAuthStateChanged(auth, currentUser=>{
         console.log('observing current user inside useEffect', currentUser);
-          setUser(currentUser)
+          setUsers(currentUser)
           setLoading(false)
          
      })

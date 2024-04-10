@@ -5,8 +5,12 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../provider/Authprovider";
 const Registration = () => {
   const [showpass, setShowpass] = useState(false);
+
+  const {createUser} = useContext(AuthContext)
 
   const handleregister = (e) => {
     e.preventDefault();
@@ -43,6 +47,15 @@ const Registration = () => {
       toast.error("password must be uppercase and lowercase character");
       return;
     }
+   
+    createUser(email,password)
+    .then(result=>{
+        console.log(result.user)
+    })
+    .catch(error =>{
+        console.log(error)
+    })
+
     toast.success("successfully register");
     e.target.reset();
   };
