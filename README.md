@@ -1,9 +1,6 @@
 # Dream house
 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
 - npm i react-hook-form [SWC] (https://www.npmjs.com/package/react-hook-form) uses in update profile
 
 - npm i swiper [SWC] (https://www.npmjs.com/package/swiper)
@@ -11,3 +8,18 @@
 - npm i react-leaflet [SWC] (https://www.npmjs.com/package/react-leaflet)
 
 
+# feature 
+
++ authentication base web site
++ login with github and google
++ private route and protected route
++ give safety
++ using map and several tools
+
+# character
+
+- you cant enter private route without login
+- update your picture and profile
+- strong password so give security
+- see details with every house
+- see location by using map
