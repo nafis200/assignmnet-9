@@ -15,6 +15,7 @@ import Registration from './cards/form/Registration';
 import Login from './cards/form/Login';
 import Privateroute from './private/Privateroute';
 import Authprovider from './provider/Authprovider';
+import Extrapage from './navbar/extra/Extrapage';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
          {
            path:'/login',
            element:<Login></Login>
+         },
+         {
+           path: '/office',
+           element: <Privateroute><Extrapage></Extrapage></Privateroute>,
          }
     ]
   },
