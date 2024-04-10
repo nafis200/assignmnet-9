@@ -58,6 +58,7 @@ const Registration = () => {
         })
         .then(()=>{
             console.log('profile update')
+            location.reload()
         })
         .catch(()=>{
              console.log('error occurs')
