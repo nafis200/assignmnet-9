@@ -1,11 +1,12 @@
 # Dream house
 
+- live-link url- (https://assignment-9-a47d2.web.app)
 
-- npm i react-hook-form [SWC] (https://www.npmjs.com/package/react-hook-form) uses in update profile
+- npm i react-hook-form [link] (https://www.npmjs.com/package/react-hook-form) uses in update profile
 
-- npm i swiper [SWC] (https://www.npmjs.com/package/swiper)
+- npm i swiper [link] (https://www.npmjs.com/package/swiper)
 
-- npm i react-leaflet [SWC] (https://www.npmjs.com/package/react-leaflet)
+- npm i react-leaflet [link] (https://www.npmjs.com/package/react-leaflet)
 
 
 # feature 
