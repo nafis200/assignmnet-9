@@ -51,6 +51,7 @@ if(users){
     })
     .then(()=>{
          toast.success('successfully update')
+         location.reload()
     })
     .catch((error)=>{
          console.log(error.message)
