@@ -5,9 +5,31 @@ import { AuthContext } from "../provider/Authprovider";
 const Navbar = () => {
 
   const {users,logOut} = useContext(AuthContext);
+  let names="unknown"
+  let images = "https://i.postimg.cc/0N2Fs1LG/photo-2024-04-10-15-50-24.jpg"
+  
+  let names1 = ""
+  let images1 = ""
+  if(users){
+    const {displayName,photoURL} = users
+    console.log(displayName,photoURL)
+    if(displayName){
+       names1 = displayName 
+    }
+    if(photoURL){
+       images1 = photoURL
+    }
+  }
+  if(names1){
+     names = names1;
+  }
+  if(images1){
+     images = images1
+  }
 
-  const names="nafis"
-
+  console.log('names',names1,images1);
+  console.log('new id',names,images);
+  
   const handleLogout = ()=>{
       logOut()
       .then(()=>{

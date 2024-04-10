@@ -21,10 +21,21 @@ const Login = () => {
          toast.success("successfully login");
       })
       .catch(error=>{
-          toast.error(error.message)
+          console.log(error.message)
       })
-      
-  }
+    }
+    const handlegoogle = ()=>{
+         signIngoogle()
+         .then(result=>{
+              console.log(result.user);
+         })
+         .catch()
+    }
+    const handlegithub = ()=>{
+        signIngithub()
+        .then(result => console.log(result.user))
+        .catch(error=> console.log(error.message))
+    }
     return ( 
         <div>
             <Helmet>
@@ -65,10 +76,10 @@ const Login = () => {
                 <button className="btn btn-primary">login</button>
               </div>
               <div className="form-control mt-6">
-                <button className="btn  font-bold bg-slate-300"> <span> <FaGoogle className='text-2xl'></FaGoogle> </span>Login with Google</button>
+                <button onClick={handlegoogle} className="btn  font-bold bg-slate-300"> <span> <FaGoogle className='text-2xl'></FaGoogle> </span>Login with Google</button>
               </div>
               <div className="form-control mt-6">
-                <button className="btn  font-bold"> <span> <FaGithub className='text-2xl'></FaGithub> </span>Login with Github</button>
+                <button onClick={handlegithub} className="btn  font-bold"> <span> <FaGithub className='text-2xl'></FaGithub> </span>Login with Github</button>
               </div>
               <div className="flex justify-end text-blue-600 underline"> <NavLink to="/registration">Register</NavLink> </div>
             </form>
