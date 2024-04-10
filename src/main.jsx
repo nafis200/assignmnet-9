@@ -13,6 +13,8 @@ import Update from './pages/Update';
 import Carddetail from './cards/Carddetail';
 import Registration from './cards/form/Registration';
 import Login from './cards/form/Login';
+import Privateroute from './private/Privateroute';
+import Authprovider from './provider/Authprovider';
 
 const router = createBrowserRouter([
   {
@@ -27,15 +29,15 @@ const router = createBrowserRouter([
          },
          {
             path:'/user',
-            element:<User></User>
+            element:<Privateroute><User></User></Privateroute>,
          },
          {
            path:'/update',
-           element:<Update></Update>
+           element:<Privateroute><Update></Update></Privateroute>
          },
          {
            path:`/detail/:id`,
-           element:<Carddetail></Carddetail>,
+           element:<Privateroute><Carddetail></Carddetail></Privateroute>,
            loader:()=>fetch('/data.json')
          },
          {
@@ -54,6 +56,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <Authprovider>
     <RouterProvider router={router} />
+    </Authprovider>
   </React.StrictMode>
 );

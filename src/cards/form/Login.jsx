@@ -2,8 +2,12 @@
 import { Helmet } from 'react-helmet';
 import { NavLink } from 'react-router-dom';
 import { FaGithub } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 const Login = () => {
-    return (
+  const handlelogin = e =>{
+      e.preventDefault();
+  }
+    return ( 
         <div>
             <Helmet>
                 <title>Login page</title>
@@ -16,7 +20,7 @@ const Login = () => {
             </h1>
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form  className="card-body">
+            <form onSubmit={handlelogin} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -41,6 +45,9 @@ const Login = () => {
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">login</button>
+              </div>
+              <div className="form-control mt-6">
+                <button className="btn  font-bold bg-slate-300"> <span> <FaGoogle className='text-2xl'></FaGoogle> </span>Login with Google</button>
               </div>
               <div className="form-control mt-6">
                 <button className="btn  font-bold"> <span> <FaGithub className='text-2xl'></FaGithub> </span>Login with Github</button>

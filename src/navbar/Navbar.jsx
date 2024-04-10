@@ -40,35 +40,7 @@ const Navbar = () => {
           User Profile
         </NavLink>
       </li>
-      <li className="lg:ml-4 p-2">
-        <NavLink
-          to="/registration"
-          className={({ isActive, isPending }) =>
-            isActive
-              ? "bg-green-400 hover:bg-red-600"
-              : isPending
-              ? "pending"
-              : ""
-          }
-        >
-          Registrtion
-        </NavLink>
-      </li>
-      <li className="lg:ml-4 p-2">
-        <NavLink
-          to="/login"
-          className={({ isActive, isPending }) =>
-            isActive
-              ? "bg-green-400 hover:bg-red-600"
-              : isPending
-              ? "pending"
-              : ""
-          }
-        >
-          login
-        </NavLink>
-      </li>
-
+     
     </>
   );
 
@@ -131,6 +103,7 @@ const Navbar = () => {
             </div>
             <button className="btn lg:p-4 md:p-4 text-white bg-green-400">Logout</button>
             {/*  */}
+            <NavLink to="/login"><button className="btn lg:p-4 md:p-4 text-white bg-blue-400">Login</button></NavLink>
           </div>
         </div>
       </div>
