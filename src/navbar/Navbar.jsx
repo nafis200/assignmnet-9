@@ -146,15 +146,15 @@ const Navbar = () => {
                role="button"
                className="btn btn-ghost btn-circle mt-2 avatar tooltip tooltip-bottom" data-tip={names}
              >
-               <div className="w-10 rounded-full">
-                 <img
+               <div className="lg:w-10 md:w-10 w-9 -ml-2 rounded-full">
+                 <img className=""
                    alt="Tailwind CSS Navbar component"
                    src={images}
                  />
                </div>
  
              </div>
-             <button onClick={handleLogout} className="btn lg:p-4 md:p-4 text-white bg-green-400">Logout</button></> : <NavLink to="/login"><button className="btn lg:p-4 lg:mr-5 md:mr-5 md:p-4 text-white bg-blue-400">Login</button></NavLink>
+             <button onClick={handleLogout} className="lg:btn md:btn p-2 lg:p-4 md:p-4 mr-20 lg:mr-4 md:mr-4 text-white bg-green-400 lg:bg-green-400 md:bg-green-400">Logout</button></> : <NavLink to="/login"><button className="btn lg:p-4 lg:mr-5 md:mr-5 md:p-4 text-white bg-blue-400">Login</button></NavLink>
             }
            
             

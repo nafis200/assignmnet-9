@@ -4,9 +4,13 @@ import Marquee from "react-fast-marquee";
 import moment from 'moment';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import { Helmet } from 'react-helmet';
 const Extrapage = () => {
     return (
         <div>
+            <Helmet>
+               <title>Office page</title>
+            </Helmet>
             <div className="mt-5">
        <p className="text-center lg:text-2xl md:text-2xl text-xl mb-10">{moment().format("dddd, MMMM Do YYYY, h:mm:ss a")}</p>
       <div className="flex">
