@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../provider/Authprovider";
 
 const Navbar = () => {
-  const names = "nafis";
+
+  const {users,logOut} = useContext(AuthContext);
+
+  const names="nafis"
   const links = (
     <>
       <li className="lg:ml-4 p-2">
@@ -87,23 +91,25 @@ const Navbar = () => {
             <ul class="menu menu-horizontal px-1">{links}</ul>
           </div>
           <div className="lg:navbar-end md:navbar-end ml-24 lg:ml-0 md:ml-0">
-            {/*  */}
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle mt-2 avatar tooltip tooltip-bottom" data-tip={names}
-            >
-              <div className="w-10 rounded-full">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
-              </div>
 
-            </div>
-            <button className="btn lg:p-4 md:p-4 text-white bg-green-400">Logout</button>
-            {/*  */}
-            <NavLink to="/login"><button className="btn lg:p-4 md:p-4 text-white bg-blue-400">Login</button></NavLink>
+            {
+               users ? <><div
+               tabIndex={0}
+               role="button"
+               className="btn btn-ghost btn-circle mt-2 avatar tooltip tooltip-bottom" data-tip={names}
+             >
+               <div className="w-10 rounded-full">
+                 <img
+                   alt="Tailwind CSS Navbar component"
+                   src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                 />
+               </div>
+ 
+             </div>
+             <button className="btn lg:p-4 md:p-4 text-white bg-green-400">Logout</button></> : <NavLink to="/login"><button className="btn lg:p-4 lg:mr-5 md:mr-5 md:p-4 text-white bg-blue-400">Login</button></NavLink>
+            }
+           
+            
           </div>
         </div>
       </div>

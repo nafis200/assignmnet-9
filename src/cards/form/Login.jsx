@@ -3,9 +3,27 @@ import { Helmet } from 'react-helmet';
 import { NavLink } from 'react-router-dom';
 import { FaGithub } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useContext } from 'react';
+import { AuthContext } from '../../provider/Authprovider';
 const Login = () => {
+  const {signInUser,signIngoogle,signIngithub} = useContext(AuthContext)
   const handlelogin = e =>{
       e.preventDefault();
+      const data = new FormData(e.target);
+      const email = data.get("email");
+      const password = data.get("password");
+      console.log(email,password);
+      signInUser(email,password)
+      .then(result=>{
+         console.log('login',result.user);
+         toast.success("successfully login");
+      })
+      .catch(error=>{
+          toast.error(error.message)
+      })
+      
   }
     return ( 
         <div>
@@ -57,6 +75,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
         </div>
     );
 };
