@@ -6,14 +6,14 @@ import { AuthContext } from "../provider/Authprovider";
 const Update = () => {
 const {users} = useContext(AuthContext);
 
-let name = ""
+let names = ""
 let emails = ""
 let verified = ""
 let images = ""
 let id = ""
 if(users){
     const {displayName,email,emailVerified,photoURL,uid} = users
-    name = displayName
+    names = displayName
     emails = email 
     verified = emailVerified
     images = photoURL 
@@ -23,7 +23,11 @@ if(users){
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({defaultValues:{
+     name:names,
+     image:images,
+     email:emails
+  }});
 
   const handleRegistration = (data) => {
     console.log(data);
