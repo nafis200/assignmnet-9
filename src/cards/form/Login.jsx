@@ -22,6 +22,7 @@ const Login = () => {
       })
       .catch(error=>{
           console.log(error.message)
+          toast.error('email password not match')
       })
     }
     const handlegoogle = ()=>{
@@ -38,7 +39,9 @@ const Login = () => {
               console.log(result.user)
               toast.success("successfully login");
         })
-        .catch(error=> console.log(error.message))
+        .catch(error=> {
+         
+        })
     }
     return ( 
         <div>
