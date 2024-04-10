@@ -7,6 +7,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/Authprovider";
+import { updateProfile } from "firebase/auth";
 const Registration = () => {
   const [showpass, setShowpass] = useState(false);
 
@@ -50,7 +51,18 @@ const Registration = () => {
    
     createUser(email,password)
     .then(result=>{
-        console.log(result.user)
+       
+        updateProfile(result.user,{
+           displayName:name,
+           photoURL: image
+        })
+        .then(()=>{
+            console.log('profile update')
+        })
+        .catch(()=>{
+             console.log('error occurs')
+        })
+
     })
     .catch(error =>{
         console.log(error)
