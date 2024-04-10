@@ -1,13 +1,28 @@
 import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
+import { useContext } from 'react';
+import { AuthContext } from "../provider/Authprovider";
 
 const Update = () => {
+const {users} = useContext(AuthContext);
+
+let name = ""
+let emails = ""
+let verified = ""
+let images = ""
+let id = ""
+if(users){
+    const {displayName,email,emailVerified,photoURL,uid} = users
+    name = displayName
+    emails = email 
+    verified = emailVerified
+    images = photoURL 
+    id = uid  
+}
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
-    watch
   } = useForm();
 
   const handleRegistration = (data) => {
@@ -24,8 +39,9 @@ const Update = () => {
           <div className="hero-content flex-col">
             <div className="text-center">
               <h1 className="lg:text-5xl md:text-3xl text-xl font-bold mb-5 -ml-8 lg:ml-0 md:ml-0">
-                Registration now!
+                Update Profile
               </h1>
+              <img src={images} className="rounded-full w-[200px] h-[200px] lg:ml-[70px]" alt="" />
             </div>
             <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 -ml-5 lg:ml-0 md:ml-0">
               <form
@@ -54,7 +70,7 @@ const Update = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Email</span>
+                    <span className="label-text">images</span>
                   </label>
                   <input
                     {...register("image", {
@@ -65,7 +81,7 @@ const Update = () => {
                     name="image"
                     className="input input-bordered"
                   />
-                  {errors.email && (
+                  {errors.image && (
                     <p className="text-red-600 font-bold py-2">
                      {errors.image.message}
                     </p>
