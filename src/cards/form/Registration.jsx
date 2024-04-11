@@ -135,9 +135,9 @@ const Registration = () => {
                     onClick={() => setShowpass(!showpass)}
                   >
                     {showpass ? (
-                      <FaEyeSlash className="text-3xl"></FaEyeSlash>
-                    ) : (
                       <FaEye className="text-3xl"></FaEye>
+                    ) : (
+                      <FaEyeSlash className="text-3xl"></FaEyeSlash>
                     )}
                   </span>
                 </div>

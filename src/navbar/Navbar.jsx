@@ -171,9 +171,9 @@ const Navbar = () => {
                 </div>
                 <div className="lg:flex md:flex hidden ">
                   {" "}
-                  <div className="lg:w-10 md:w-10 -ml-2 rounded-full">
+                  <div className=" w-10 -ml-2 rounded-full tooltip tooltip-bottom" data-tip={names}>
                     <img
-                      className="rounded-full w-10 mt-1 -ml-5"
+                      className=" mt-1 rounded-full -ml-5"
                       alt="Tailwind CSS Navbar component"
                       src={images}
                     />
