@@ -1,45 +1,44 @@
 import React, { useContext } from "react";
 import { NavLink, Navigate } from "react-router-dom";
 import { AuthContext } from "../provider/Authprovider";
+import { IoIosArrowDropdownCircle } from "react-icons/io";
 
 const Navbar = () => {
+  const { users, logOut } = useContext(AuthContext);
+  let names = "unknown";
+  let images = "https://i.postimg.cc/0N2Fs1LG/photo-2024-04-10-15-50-24.jpg";
 
-  const {users,logOut} = useContext(AuthContext);
-  let names="unknown"
-  let images = "https://i.postimg.cc/0N2Fs1LG/photo-2024-04-10-15-50-24.jpg"
-  
-  let names1 = ""
-  let images1 = ""
-  if(users){
-    const {displayName,photoURL} = users
-    console.log(displayName,photoURL)
-    if(displayName){
-       names1 = displayName 
+  let names1 = "";
+  let images1 = "";
+  if (users) {
+    const { displayName, photoURL } = users;
+    console.log(displayName, photoURL);
+    if (displayName) {
+      names1 = displayName;
     }
-    if(photoURL){
-       images1 = photoURL
+    if (photoURL) {
+      images1 = photoURL;
     }
   }
-  if(names1){
-     names = names1;
+  if (names1) {
+    names = names1;
   }
-  if(images1){
-     images = images1
+  if (images1) {
+    images = images1;
   }
 
-  console.log('names',names1,images1);
-  console.log('new id',names,images);
-  
-  const handleLogout = ()=>{
-      logOut()
-      .then(()=>{
-         Navigate('/login');
+  console.log("names", names1, images1);
+  console.log("new id", names, images);
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        Navigate("/login");
       })
-      .catch((error)=>{
-          console.log('logout error meesage',error.message);
-      })
-  }
- 
+      .catch((error) => {
+        console.log("logout error meesage", error.message);
+      });
+  };
 
   const links = (
     <>
@@ -89,10 +88,9 @@ const Navbar = () => {
               : ""
           }
         >
-        office
+          office
         </NavLink>
       </li>
-     
     </>
   );
 
@@ -126,9 +124,7 @@ const Navbar = () => {
                 tabindex="0"
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 flex"
               >
-                <div>
-                {links}
-                </div>
+                <div>{links}</div>
               </ul>
             </div>
             <a className="btn btn-ghost text-xl lg:text-2xl font-bold">
@@ -139,32 +135,70 @@ const Navbar = () => {
             <ul class="menu menu-horizontal px-1">{links}</ul>
           </div>
           <div className="lg:navbar-end md:navbar-end ml-24 lg:ml-0 md:ml-0">
-
-            {
-               users ? <><div
-               tabIndex={0}
-               role="button"
-               className="btn btn-ghost btn-circle mt-2 avatar tooltip tooltip-bottom" data-tip={names}
-             >
-               <div className="lg:w-10 md:w-10 w-9 -ml-2 rounded-full">
-                 <img className=""
-                   alt="Tailwind CSS Navbar component"
-                   src={images}
-                 />
-               </div>
- 
-             </div>
-             <button onClick={handleLogout} className="lg:btn md:btn p-2 lg:p-4 md:p-4 mr-20 lg:mr-4 md:mr-4 text-white bg-green-400 lg:bg-green-400 md:bg-green-400">Logout</button></> : <NavLink to="/login"><button className="btn lg:p-4 lg:mr-5 md:mr-5 md:p-4 text-white bg-blue-400">Login</button></NavLink>
-            }
-           
-            
+            {users ? (
+              <>
+                <div className="dropdown dropdown-left lg:hidden md:hidden">
+                  <div tabIndex={0} role="button" className="btn m-1">
+                  <IoIosArrowDropdownCircle className="text-2xl"></IoIosArrowDropdownCircle>
+                  </div>
+                  <ul
+                    tabIndex={0}
+                    className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                  >
+                    <>
+                      <div
+                        tabIndex={0}
+                        role="button"
+                        className="btn btn-ghost btn-circle mt-2 avatar tooltip tooltip-bottom"
+                        data-tip={names}
+                      >
+                        <div className="lg:w-10 md:w-10 w-9 -ml-2 rounded-full">
+                          <img
+                            className=""
+                            alt="Tailwind CSS Navbar component"
+                            src={images}
+                          />
+                        </div>
+                      </div>
+                      <button
+                        onClick={handleLogout}
+                        className="lg:btn md:btn p-2 lg:p-4 md:p-4 mr-20 lg:mr-4 md:mr-4 text-white bg-green-400 lg:bg-green-400 md:bg-green-400"
+                      >
+                        Logout
+                      </button>
+                    </>
+                  </ul>
+                </div>
+                <div className="lg:flex md:flex hidden ">
+                  {" "}
+                  <div className="lg:w-10 md:w-10 -ml-2 rounded-full">
+                    <img
+                      className="rounded-full w-10 mt-1 -ml-5"
+                      alt="Tailwind CSS Navbar component"
+                      src={images}
+                    />
+                  </div>
+                  <button
+                    onClick={handleLogout}
+                    className="lg:btn md:btn p-2 lg:p-4 md:p-4 mr-20 lg:mr-4 md:mr-4 text-white bg-green-400 lg:bg-green-400 md:bg-green-400"
+                  >
+                    Logout
+                  </button>
+                </div>
+              </>
+            ) : (
+              <NavLink to="/login">
+                <button className="btn lg:p-4 lg:mr-5 md:mr-5 md:p-4 text-white bg-blue-400">
+                  Login
+                </button>
+              </NavLink>
+            )}
           </div>
         </div>
       </div>
-      
     </div>
   );
 };
 
-// 
+//
 export default Navbar;
