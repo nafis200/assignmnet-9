@@ -26,14 +26,14 @@ const User = () => {
             </Helmet>
            <div className='container mx-auto'>
              
-             <img src={images} className='md:ml-[250px] lg:ml-[700px] ml-[50px] mt-10 rounded-full w-[200px] h-[200px]' alt="" />
-             <h2 className="lg:text-3xl md:text-2xl text-xl font-bold md:ml-[200px] lg:ml-[620px] ml-[20px] mt-10 text-blue-400">
+             <img src={images} className='md:ml-[250px] lg:ml-[450px] xl:ml-[700px] ml-[50px] mt-10 rounded-full w-[200px] h-[200px]' alt="" />
+             <h2 className="lg:text-3xl md:text-2xl text-xl font-bold md:ml-[200px] lg:ml-[420px] xl:ml-[620px] ml-[20px] mt-10 text-blue-400">
                <span>Name:</span>  {name}</h2>
-             <h2 className="lg:text-3xl md:text-2xl text-xl font-bold md:ml-[200px] lg:ml-[620px] ml-[20px] mt-5 text-red-600">
+             <h2 className="lg:text-3xl md:text-2xl text-xl font-bold md:ml-[200px] lg:ml-[420px] xl:ml-[620px] ml-[20px] mt-5 text-red-600">
                <span>Email:</span> {emails}</h2>
-               <h2 className="lg:text-3xl md:text-2xl text-xl font-bold md:ml-[200px] lg:ml-[620px] ml-[20px] mt-5 text-purple-400">
+               <h2 className="lg:text-3xl md:text-2xl text-xl font-bold md:ml-[200px] lg:ml-[420px] xl:ml-[620px] ml-[20px] mt-5 text-purple-400">
                <span>Verified:</span>  {verified ? <span>true</span> : <span>false</span> }</h2>
-               <h2 className="lg:text-3xl md:text-2xl text-xl font-bold md:ml-[200px] lg:ml-[620px] ml-5 mt-5 ">
+               <h2 className="lg:text-3xl md:text-2xl text-xl font-bold md:ml-[200px] lg:ml-[420px] xl:ml-[620px] ml-5 mt-5 ">
                <span>Id:</span>  {id}</h2>
 
             </div> 
