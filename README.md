@@ -1,6 +1,6 @@
 # Dream house
 
-- live-link url- ( https://assignment-9-a47d2.web.app  )
+- live-link url- ( https://assignment-9-a47d2.web.app)
 
 - npm i react-hook-form [link] (https://www.npmjs.com/package/react-hook-form) uses in update profile
 

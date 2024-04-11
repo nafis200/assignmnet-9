@@ -15,6 +15,9 @@ const Login = () => {
       const email = data.get("email");
       const password = data.get("password");
       console.log(email,password);
+      if(!email && !password){
+        return;
+      }
       signInUser(email,password)
       .then(result=>{
          console.log('login',result.user);
@@ -90,6 +93,7 @@ const Login = () => {
               </div>
               <div className="flex justify-end text-blue-600 underline"> <NavLink to="/registration">Register</NavLink> </div>
             </form>
+            
           </div>
         </div>
       </div>
