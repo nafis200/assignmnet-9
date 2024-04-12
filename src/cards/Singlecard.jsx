@@ -10,7 +10,7 @@ const Singlecard = ({data}) => {
     const {id,estate_title,segment_name,description,price,area,location,image,facilities,status} = data
     return (
         <div className="card lg:w-96 md:w-96 w-72 bg-base-100 shadow-xl ml-7">
-        <figure><img className='w-[300px] lg:w-full md:w-full' src={image} alt="Shoes" /></figure>
+        <figure><img className='w-[300px] lg:w-full md:w-full' src={image} alt="Shoes"  /></figure>
         <div className="card-body">
     <h2 className="card-title mt-9"><span className='flex mb-7 lg:mb-7 md:mb-7'>{id}</span> {estate_title}</h2>
     <h2 className='font-bold flex items-center gap-2'> <span> <FaHouse></FaHouse> </span> {segment_name}</h2>

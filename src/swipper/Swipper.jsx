@@ -6,7 +6,7 @@ import { Navigation,Pagination } from 'swiper/modules';
 
 const Swipper = () => {
   return (
-    <div className='mt-[200px] lg:mt-10 '>
+    <div className=' lg:mt-10 '>
     <Swiper
       pagination={{
         type: 'fraction',

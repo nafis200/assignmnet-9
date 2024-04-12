@@ -122,7 +122,7 @@ const Navbar = () => {
               </div>
               <ul
                 tabindex="0"
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 flex"
+                className="menu menu-sm dropdown-content mt-3 z-[20] p-2 shadow bg-base-100 rounded-box w-52 flex"
               >
                 <div>{links}</div>
               </ul>
@@ -143,7 +143,7 @@ const Navbar = () => {
                   </div>
                   <ul
                     tabIndex={0}
-                    className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                    className="dropdown-content z-[20] menu p-2 shadow bg-base-100 rounded-box w-52"
                   >
                     <>
                       <div

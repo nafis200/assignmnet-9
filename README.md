@@ -8,6 +8,9 @@
 
 - npm i react-leaflet [link] (https://www.npmjs.com/package/react-leaflet)
 
+- npm install aos --save
+ [link] (https://michalsnik.github.io/aos/)
+
 
 # feature 
 
